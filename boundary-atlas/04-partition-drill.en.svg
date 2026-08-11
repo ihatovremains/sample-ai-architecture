@@ -1,0 +1,104 @@
+<svg width="680" height="770" viewBox="0 0 680 770" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>The Boundary Atlas, figure 4: the partition drill and the evidence contract</title>
+<desc>A vertical timeline of an inter-region partition, drawn as the best case under a stated precondition: every peer artifact was newly issued and held its full budget at the cut, because FP-1 max-ages run from each artifact's own freshness and re-fetching does not reset that clock, so in production a class can lapse at T0 itself and the order of expiry is not fixed; the boundary is inclusive, so an artifact at exactly its max-age is still within it. At T0 the link is cut: peer-sourced snapshot entries freeze at their own remaining budget while locally sourced anchors, status data, and BL-1 verdicts keep refreshing; a credential revoked by a peer issuer after the cut stays unseen for the remainder of that artifact's status window, so the base ceiling is unchanged and a tier that accepts the remaining window keeps deciding at full assurance, while a tier may override that base ceiling once the cell knows it is partitioned by tightening its own status max-age or refusing outright. Past 24 hours, peer status data is expired and checks that depend on peer revocation lose their freshness basis, so the ceiling for those checks is indeterminate, resolved per risk tier. Past 7 days, peer anchors, policy, and peer-issued BL-1 verdicts are expired too, so the per-use path disables itself wherever it depended on a peer verdict, and the derived path is available only where a qualified derived binding is installed and the anchors, status, and policy that path depends on are themselves within FP-1; otherwise the outcome is indeterminate and no allow. This does not close BL-1's issuer-visible refill channel, which runs on its published cadence regardless. At reconnect, epochs and content hashes are compared before traffic: the same epoch and hash resume; while epochs differ the intersection of allowlists sets the ceiling but conditional cargo stays blocked, so the only traffic is the staged epoch transition; and the same epoch with a different hash is an equivocating ledger, recovered by incrementing to the next epoch under the last mutually accepted authority and schema, with the equivocating epoch recorded as revoked, or by out-of-band re-provisioning where no common basis remains. Nothing is backfilled, because evidence never crossed the border. Below the timeline, the evidence contract table gives each record class its retention and the actors who may read it. Attempt evidence and the failure journal are kept two years and read by that domain's operators and auditors. Partition-access records are kept five years in whichever domain observed the refusal or failure — a request refused at the source or lost in transport never reaches the target — and are read by that same domain's operators and auditors. Observation data under rule 9 is kept thirty days and read by its own domain's operators and auditors. The BL-1 refill record set — the refill records themselves, the signed schedule manifest, each window's acceptance result, and the verdict lineage — is kept three years and read by the Issuer operator and the issuing region's auditors. Health records are kept one year and drill results three, both read by regional operators and auditors. At closure, every unexpired class is transferred to a named successor custodian in the same jurisdiction, which holds and administers each class to its own per-class expiry and deletes it there. Custody is not a reading right: the custodian inherits the keys and the administration but gains no content read by holding the store, and the readers of each class remain the inherited per-domain operators and auditors. Separately, the disposal attestation is retained for ten years and read by that jurisdiction's regulator, who is a reader of that attestation and not a reader of the evidence. Raw proofs, disclosed claims, and stable holder or credential identifiers are never recorded, and an attempt that cannot be evidenced is not allowed.</desc>
+<style>
+text { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; fill: #2C2C2A; }
+.ts { font-size: 12px; fill: #5F5E5A; }
+.th { font-size: 14px; font-weight: 500; }
+.tm { font-size: 12px; font-weight: 500; fill: #2C2C2A; }
+.hd { font-size: 12px; font-weight: 500; fill: #2C2C2A; }
+.box { fill: #FFFFFF; stroke: #888780; }
+.c-gray > rect { fill: #F1EFE8; stroke: #5F5E5A; } .c-gray > .th { fill: #444441; } .c-gray > .ts { fill: #5F5E5A; } .c-gray > .hd { fill: #444441; }
+.cond { fill: #854F0B; }
+</style>
+
+<rect x="0" y="0" width="680" height="770" fill="#FFFFFF"/>
+
+<text class="ts" x="40" y="48" dominant-baseline="central">Best case. Max-ages run from each artifact and a re-fetch does not reset</text>
+<text class="ts" x="40" y="64" dominant-baseline="central">them, so in production a class can lapse at T0 and the order is not fixed.</text>
+
+<line x1="130" y1="96" x2="130" y2="400" stroke="#888780" stroke-width="1"/>
+
+<circle cx="130" cy="128" r="5" fill="#5F5E5A"/>
+<circle cx="130" cy="208" r="5" fill="#5F5E5A"/>
+<circle cx="130" cy="288" r="5" fill="#5F5E5A"/>
+<circle cx="130" cy="368" r="5" fill="#5F5E5A"/>
+
+<text class="tm" x="114" y="128" text-anchor="end" dominant-baseline="central">T0</text>
+<text class="tm" x="114" y="208" text-anchor="end" dominant-baseline="central">&gt;24 h</text>
+<text class="tm" x="114" y="288" text-anchor="end" dominant-baseline="central">&gt;7 d</text>
+<text class="tm" x="114" y="368" text-anchor="end" dominant-baseline="central">reconnect</text>
+
+<g>
+<rect class="box" x="160" y="96" width="480" height="64" rx="8" stroke-width="0.5"/>
+<text class="th" x="180" y="114" dominant-baseline="central">Link cut — the cell keeps running</text>
+<text class="ts" x="180" y="132" dominant-baseline="central">peer entries freeze at their own remaining budget</text>
+<text class="ts" x="180" y="148" dominant-baseline="central">blind window: post-cut peer revocations unseen (residual)</text>
+</g>
+
+<g>
+<rect class="box" x="160" y="176" width="480" height="64" rx="8" stroke-width="0.5"/>
+<text class="th" x="180" y="194" dominant-baseline="central">Peer status data expired</text>
+<text class="ts" x="180" y="212" dominant-baseline="central">checks that depend on peer revocation lose their basis</text>
+<text class="ts" x="180" y="228" dominant-baseline="central">base ceiling: <tspan class="cond">indeterminate</tspan> there; tiers may tighten</text>
+</g>
+
+<g>
+<rect class="box" x="160" y="256" width="480" height="64" rx="8" stroke-width="0.5"/>
+<text class="th" x="180" y="274" dominant-baseline="central">Peer anchors, policy, verdicts expired</text>
+<text class="ts" x="180" y="292" dominant-baseline="central">per-use disabled where a peer verdict applied</text>
+<text class="ts" x="180" y="308" dominant-baseline="central">derived only if qualified and its inputs are fresh</text>
+</g>
+
+<g>
+<rect class="box" x="160" y="336" width="480" height="64" rx="8" stroke-width="0.5"/>
+<text class="th" x="180" y="354" dominant-baseline="central">Reconnect — epochs before traffic</text>
+<text class="ts" x="180" y="372" dominant-baseline="central">epochs differ: ceiling only; conditional cargo blocked</text>
+<text class="ts" x="180" y="388" dominant-baseline="central">equivocation: increment under the last shared basis</text>
+</g>
+
+<g class="c-gray">
+<rect x="40" y="424" width="600" height="236" rx="12" stroke-width="0.5"/>
+<text class="th" x="60" y="446" dominant-baseline="central">The evidence contract — classes, retention, readers</text>
+
+<text class="hd" x="60" y="472" dominant-baseline="central">record class</text>
+<text class="hd" x="300" y="472" dominant-baseline="central">kept</text>
+<text class="hd" x="384" y="472" dominant-baseline="central">read by</text>
+
+<text class="ts" x="60" y="494" dominant-baseline="central">attempt evidence · journal</text>
+<text class="ts" x="300" y="494" dominant-baseline="central">2 y</text>
+<text class="ts" x="384" y="494" dominant-baseline="central">domain operators + auditors</text>
+
+<text class="ts" x="60" y="512" dominant-baseline="central">partition-access (where seen)</text>
+<text class="ts" x="300" y="512" dominant-baseline="central">5 y</text>
+<text class="ts" x="384" y="512" dominant-baseline="central">its operators and auditors</text>
+
+<text class="ts" x="60" y="530" dominant-baseline="central">observation data (rule 9)</text>
+<text class="ts" x="300" y="530" dominant-baseline="central">30 d</text>
+<text class="ts" x="384" y="530" dominant-baseline="central">own-domain operators, auditors</text>
+
+<text class="ts" x="60" y="548" dominant-baseline="central">BL-1 refill record set</text>
+<text class="ts" x="300" y="548" dominant-baseline="central">3 y</text>
+<text class="ts" x="384" y="548" dominant-baseline="central">Issuer op + region auditors</text>
+
+<text class="ts" x="60" y="566" dominant-baseline="central">health · drill results</text>
+<text class="ts" x="300" y="566" dominant-baseline="central">1 y / 3 y</text>
+<text class="ts" x="384" y="566" dominant-baseline="central">regional operators, auditors</text>
+
+<text class="ts" x="60" y="584" dominant-baseline="central">successor custody (unexpired)</text>
+<text class="ts" x="300" y="584" dominant-baseline="central">per class</text>
+<text class="ts" x="384" y="584" dominant-baseline="central">inherited domain readers</text>
+
+<text class="ts" x="60" y="602" dominant-baseline="central">disposal attestation</text>
+<text class="ts" x="300" y="602" dominant-baseline="central">10 y</text>
+<text class="ts" x="384" y="602" dominant-baseline="central">the jurisdiction's regulator</text>
+
+<text class="ts" x="60" y="626" dominant-baseline="central">never recorded: raw proofs, claims, stable holder / credential IDs</text>
+<text class="ts" x="60" y="644" dominant-baseline="central">if it cannot be written: no allow, and a health record says why</text>
+</g>
+
+<text class="ts" x="40" y="690" dominant-baseline="central">Executable here: SU-1's closure test — executable is not passed.</text>
+<text class="ts" x="40" y="714" dominant-baseline="central">Partition degrades the answer, never the evidence.</text>
+<text class="ts" x="40" y="736" dominant-baseline="central">© 2026 Takaaki Suzuki · CC BY-NC-ND 4.0</text>
+<text class="ts" x="40" y="756" dominant-baseline="central">ihatovremains.github.io/sample-ai-architecture/boundary-atlas</text>
+</svg>

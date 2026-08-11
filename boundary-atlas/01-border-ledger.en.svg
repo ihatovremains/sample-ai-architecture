@@ -1,0 +1,161 @@
+<svg width="680" height="1050" viewBox="0 0 680 1050" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>The Boundary Atlas, figure 1: the border ledger — data classes against exchange paths and residency</title>
+<desc>A matrix of thirteen data classes against four exchange paths (issue, present, result, federation sync) and one residency constraint asking whether data may leave its origin region — the region where it was issued, generated, or observed. Identity artifacts split into three mutually exclusive leaves under a versioned discriminator: reusable source credential, qualified per-use credential, and qualified unlinkable presentation. Every presentation-capable leaf is gated under rule ten, which references the figure 0 binding gate; ceremony and anti-replay mechanics are reserved under control SU-1 to figures 2 and 4. Reusable credentials never cross the Present lane. No system lane carries raw PII or biometric reference data; they leave their origin region only in the holder's custody. Unlinkable presentations are derived by the holder during the local ceremony; remote cross-region presentation is not adopted. Checkpoint time, location, and network metadata carry a distinct observation verdict, obs, under rule nine. Status data, trust anchors, and policy cross only signed, versioned, unexpired, and validated with max-age per freshness policy FP-1. Operational telemetry has no permitted crossing in the initial ledger. Business data carries a dash for governance outside this ledger. The predicate register shows one fully specified active entry and inactive candidates that cross nothing. The ledger's own epoch and approval gates appear below the matrix. Every cell holds an explicit verdict; there are no blank cells.</desc>
+<style>
+text { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; fill: #2C2C2A; }
+.ts { font-size: 12px; fill: #5F5E5A; }
+.hd { font-size: 12px; font-weight: 500; fill: #2C2C2A; }
+.rl { font-size: 12px; fill: #2C2C2A; }
+.gy { font-size: 13px; }
+.ok { fill: #3B6D11; } .no { fill: #A32D2D; } .cond { fill: #854F0B; } .na { fill: #5F5E5A; }
+</style>
+
+<rect x="0" y="0" width="680" height="1050" fill="#FFFFFF"/>
+
+<rect x="40" y="118" width="600" height="30" fill="#F1EFE8"/>
+<rect x="40" y="178" width="600" height="30" fill="#F1EFE8"/>
+<rect x="40" y="238" width="600" height="30" fill="#F1EFE8"/>
+<rect x="40" y="298" width="600" height="30" fill="#F1EFE8"/>
+<rect x="40" y="358" width="600" height="30" fill="#F1EFE8"/>
+<rect x="40" y="418" width="600" height="30" fill="#F1EFE8"/>
+
+<text class="hd" x="48" y="58" dominant-baseline="central">Data class</text>
+<text class="hd" x="289" y="58" text-anchor="middle" dominant-baseline="central">Issue</text>
+<text class="hd" x="367" y="58" text-anchor="middle" dominant-baseline="central">Present</text>
+<text class="hd" x="445" y="58" text-anchor="middle" dominant-baseline="central">Result</text>
+<text class="hd" x="523" y="50" text-anchor="middle" dominant-baseline="central">Federation</text>
+<text class="hd" x="523" y="66" text-anchor="middle" dominant-baseline="central">sync</text>
+<text class="hd" x="601" y="46" text-anchor="middle" dominant-baseline="central">Leaves</text>
+<text class="hd" x="601" y="58" text-anchor="middle" dominant-baseline="central">origin</text>
+<text class="hd" x="601" y="70" text-anchor="middle" dominant-baseline="central">region</text>
+
+<line x1="40" y1="80" x2="640" y2="80" stroke="#888780" stroke-width="1"/>
+<line x1="250" y1="40" x2="250" y2="478" stroke="#888780" stroke-width="1"/>
+<line x1="328" y1="40" x2="328" y2="478" stroke="#888780" stroke-width="1"/>
+<line x1="406" y1="40" x2="406" y2="478" stroke="#888780" stroke-width="1"/>
+<line x1="484" y1="40" x2="484" y2="478" stroke="#888780" stroke-width="1"/>
+<line x1="562" y1="40" x2="562" y2="478" stroke="#888780" stroke-width="1"/>
+<line x1="40" y1="478" x2="640" y2="478" stroke="#888780" stroke-width="1"/>
+
+<text class="rl" x="48" y="103" dominant-baseline="central">Raw PII / source documents</text>
+<text class="gy no" x="289" y="103" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy no" x="367" y="103" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy no" x="445" y="103" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy no" x="523" y="103" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy cond" x="601" y="103" text-anchor="middle" dominant-baseline="central">△²</text>
+
+<text class="rl" x="48" y="133" dominant-baseline="central">Biometric reference data ⁵</text>
+<text class="gy no" x="289" y="133" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy no" x="367" y="133" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy no" x="445" y="133" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy no" x="523" y="133" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy cond" x="601" y="133" text-anchor="middle" dominant-baseline="central">△²</text>
+
+<text class="rl" x="48" y="163" dominant-baseline="central">Reusable source credential</text>
+<text class="gy ok" x="289" y="163" text-anchor="middle" dominant-baseline="central">✓</text>
+<text class="gy no" x="367" y="163" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy no" x="445" y="163" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy no" x="523" y="163" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy cond" x="601" y="163" text-anchor="middle" dominant-baseline="central">△¹</text>
+
+<text class="rl" x="48" y="193" dominant-baseline="central">Per-use credential ¹⁰</text>
+<text class="gy cond" x="289" y="193" text-anchor="middle" dominant-baseline="central">△¹⁰</text>
+<text class="gy cond" x="367" y="193" text-anchor="middle" dominant-baseline="central">△¹⁰</text>
+<text class="gy no" x="445" y="193" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy no" x="523" y="193" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy cond" x="601" y="193" text-anchor="middle" dominant-baseline="central">△¹</text>
+
+<text class="rl" x="48" y="217" dominant-baseline="central">Unlinkable presentation</text>
+<text class="ts" x="48" y="231" dominant-baseline="central">(boolean or proof)</text>
+<text class="gy no" x="289" y="223" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy cond" x="367" y="223" text-anchor="middle" dominant-baseline="central">△¹⁰</text>
+<text class="gy no" x="445" y="223" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy no" x="523" y="223" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy no" x="601" y="223" text-anchor="middle" dominant-baseline="central">✕⁶</text>
+
+<text class="rl" x="48" y="253" dominant-baseline="central">Decision results (coarse)</text>
+<text class="gy no" x="289" y="253" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy no" x="367" y="253" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy ok" x="445" y="253" text-anchor="middle" dominant-baseline="central">✓</text>
+<text class="gy no" x="523" y="253" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy cond" x="601" y="253" text-anchor="middle" dominant-baseline="central">△¹</text>
+
+<text class="rl" x="48" y="283" dominant-baseline="central">Status data (group / epoch)</text>
+<text class="gy no" x="289" y="283" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy no" x="367" y="283" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy no" x="445" y="283" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy cond" x="523" y="283" text-anchor="middle" dominant-baseline="central">△⁷</text>
+<text class="gy cond" x="601" y="283" text-anchor="middle" dominant-baseline="central">△⁷</text>
+
+<text class="rl" x="48" y="313" dominant-baseline="central">Trust anchors &amp; policy</text>
+<text class="gy no" x="289" y="313" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy no" x="367" y="313" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy no" x="445" y="313" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy cond" x="523" y="313" text-anchor="middle" dominant-baseline="central">△⁷</text>
+<text class="gy cond" x="601" y="313" text-anchor="middle" dominant-baseline="central">△⁷</text>
+
+<text class="rl" x="48" y="343" dominant-baseline="central">Event-level audit records ⁴</text>
+<text class="gy no" x="289" y="343" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy no" x="367" y="343" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy no" x="445" y="343" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy no" x="523" y="343" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy no" x="601" y="343" text-anchor="middle" dominant-baseline="central">✕</text>
+
+<text class="rl" x="48" y="373" dominant-baseline="central">Checkpoint time &amp; location ⁹</text>
+<text class="gy no" x="289" y="373" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy cond" x="367" y="373" text-anchor="middle" dominant-baseline="central">obs⁹</text>
+<text class="gy no" x="445" y="373" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy no" x="523" y="373" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy no" x="601" y="373" text-anchor="middle" dominant-baseline="central">✕</text>
+
+<text class="rl" x="48" y="403" dominant-baseline="central">Network / device metadata ⁹</text>
+<text class="gy no" x="289" y="403" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy cond" x="367" y="403" text-anchor="middle" dominant-baseline="central">obs⁹</text>
+<text class="gy no" x="445" y="403" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy no" x="523" y="403" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy no" x="601" y="403" text-anchor="middle" dominant-baseline="central">✕</text>
+
+<text class="rl" x="48" y="433" dominant-baseline="central">Ops telemetry (aggregate)</text>
+<text class="gy no" x="289" y="433" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy no" x="367" y="433" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy no" x="445" y="433" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy no" x="523" y="433" text-anchor="middle" dominant-baseline="central">✕³</text>
+<text class="gy no" x="601" y="433" text-anchor="middle" dominant-baseline="central">✕³</text>
+
+<text class="rl" x="48" y="463" dominant-baseline="central">Business / trade data</text>
+<text class="gy no" x="289" y="463" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy no" x="367" y="463" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy no" x="445" y="463" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy no" x="523" y="463" text-anchor="middle" dominant-baseline="central">✕</text>
+<text class="gy na" x="601" y="463" text-anchor="middle" dominant-baseline="central">—⁸</text>
+
+<text class="ts" x="40" y="502" dominant-baseline="central"><tspan class="ok">✓</tspan> may cross · <tspan class="no">✕</tspan> never crosses · <tspan class="cond">△</tspan> crosses only under a named condition</text>
+<text class="ts" x="40" y="522" dominant-baseline="central"><tspan class="cond">obs</tspan> = not attestation cargo; observed or derived at the checkpoint</text>
+<text class="ts" x="40" y="542" dominant-baseline="central">— governed outside this ledger · numbered conditions are citable rule IDs</text>
+
+<text class="ts" x="40" y="566" dominant-baseline="central">¹ only in the holder's custody</text>
+<text class="ts" x="40" y="586" dominant-baseline="central">² in the holder's custody only; never presented to, copied, or retained by any checkpoint</text>
+<text class="ts" x="40" y="606" dominant-baseline="central">³ excluded from the initial ledger; admission only by a named amendment with owner</text>
+<text class="ts" x="40" y="626" dominant-baseline="central">⁴ readable by regional operators and auditors only</text>
+<text class="ts" x="40" y="646" dominant-baseline="central">⁵ device-enrolled; issuer-supplied templates hit this row and the credential row</text>
+<text class="ts" x="40" y="666" dominant-baseline="central">⁶ derived in-region at presentation; the transcript stays with the regional verifier</text>
+<text class="ts" x="40" y="686" dominant-baseline="central">⁷ signed, versioned, unexpired, validated by the trust registry; max-age per policy FP-1</text>
+<text class="ts" x="40" y="706" dominant-baseline="central">⁸ governed outside this ledger by an external trade-compliance policy and its owner</text>
+<text class="ts" x="40" y="726" dominant-baseline="central">⁹ regional-only, per-verifier, purpose-limited; no stable subject key; never joined</text>
+<text class="ts" x="40" y="746" dominant-baseline="central">¹⁰ qualified by the figure 0 binding gate; ceremony and anti-replay mechanics per SU-1</text>
+
+<text class="ts" x="40" y="774" dominant-baseline="central">Predicate register — active: age_over_18 = age ≥ 18 at presentation time</text>
+<text class="ts" x="40" y="794" dominant-baseline="central">authority: regional ID issuer · legal jurisdiction: EU · v1 · freshness ≤ 24 h</text>
+<text class="ts" x="40" y="814" dominant-baseline="central">purpose: age-gated release of goods</text>
+<text class="ts" x="40" y="834" dominant-baseline="central">candidates (inactive, cross nothing): sanctions_clear · licensed_importer</text>
+<text class="ts" x="40" y="854" dominant-baseline="central">Freshness policy FP-1: trust anchors ≤ 7 d · status data ≤ 24 h · policy ≤ 7 d</text>
+<text class="ts" x="40" y="874" dominant-baseline="central">Channel owners: time / place → regional checkpoint operator</text>
+<text class="ts" x="40" y="894" dominant-baseline="central">network / device → regional platform operator · biometrics → holder (device-enforced)</text>
+<text class="ts" x="40" y="914" dominant-baseline="central">business identifiers → supply chain data plane owner</text>
+<text class="ts" x="40" y="934" dominant-baseline="central">This ledger: epoch 1 · signed by its approval authority · hash recorded at release</text>
+<text class="ts" x="40" y="954" dominant-baseline="central">Approval gates: legal · compliance · data governance · architecture &amp; security</text>
+
+<text class="ts" x="40" y="982" dominant-baseline="central">A blank cell is not a decision — this ledger has no blank cells.</text>
+<text class="ts" x="40" y="1008" dominant-baseline="central">© 2026 Takaaki Suzuki · CC BY-NC-ND 4.0</text>
+<text class="ts" x="40" y="1028" dominant-baseline="central">ihatovremains.github.io/sample-ai-architecture/boundary-atlas</text>
+</svg>
