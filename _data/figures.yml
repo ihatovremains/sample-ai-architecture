@@ -1,0 +1,13 @@
+# The five figures of work 01, in reading order.
+# `label` is taken verbatim from each essay's own H1, minus the series prefix
+# "The Boundary Atlas · ". No new copy is introduced here.
+- slug: 00-boundary-map.en
+  label: "00 — Draw the borders before the arrows"
+- slug: 01-border-ledger.en
+  label: "01 — The border ledger"
+- slug: 02-ceremony.en
+  label: "02 — The ceremony, and the second missing arrow"
+- slug: 03-deployment.en
+  label: "03 — The standard cell, and where products are allowed to live"
+- slug: 04-partition-drill.en
+  label: "04 — The drill, and the contract this series kept deferring"

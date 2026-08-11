@@ -1,3 +1,14 @@
 title: Sample AI Architecture
 description: Design studies in vendor-neutral architecture.
 theme: jekyll-theme-primer
+
+# Reader navigation is applied at the layout level so that the approved essay
+# and SVG files stay byte-for-byte unchanged. The `figure` layout wraps the
+# theme's default layout and appends the series index; it renders nothing extra
+# on boundary-atlas/index.md, which already lists the five figures.
+defaults:
+  - scope:
+      path: "boundary-atlas"
+      type: "pages"
+    values:
+      layout: "figure"

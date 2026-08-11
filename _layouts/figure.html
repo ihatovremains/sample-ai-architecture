@@ -1,0 +1,21 @@
+---
+layout: default
+---
+{{ content }}
+
+{% unless page.path contains 'index.md' %}
+<nav class="border-top border-gray-light mt-5 pt-3" aria-label="The Boundary Atlas">
+  <p><a href="{{ '/boundary-atlas/' | relative_url }}">&#8592; The Boundary Atlas</a></p>
+  <ul style="list-style: none; padding-left: 0;">
+    {%- for f in site.data.figures %}
+    <li>
+      {%- if page.path contains f.slug %}
+      <span aria-current="page" class="text-gray">{{ f.label }}</span>
+      {%- else %}
+      <a href="{{ f.slug | prepend: '/boundary-atlas/' | relative_url }}">{{ f.label }}</a>
+      {%- endif %}
+    </li>
+    {%- endfor %}
+  </ul>
+</nav>
+{% endunless %}
