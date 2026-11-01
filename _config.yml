@@ -12,3 +12,72 @@ defaults:
       type: "pages"
     values:
       layout: "figure"
+
+  # Link-preview metadata (Open Graph / Twitter cards) is also applied here as
+  # front matter defaults, so the approved essay and SVG files stay unchanged.
+  # Descriptions reuse the pages' own wording: the series index for the atlas,
+  # the atlas index's one-line entries for each figure. Images are 2400×1260
+  # cards in boundary-atlas/og/ that place the figure beside its title.
+  - scope:
+      path: "index.md"
+      type: "pages"
+    values:
+      description: "Design studies in vendor-neutral, model-neutral architecture. Each study takes a problem that is usually answered with a product name, and answers it with boundaries, cargo rules, and named owners instead."
+      image:
+        path: "/boundary-atlas/og/boundary-atlas.png"
+        width: 2400
+        height: 1260
+  - scope:
+      path: "boundary-atlas/index.md"
+      type: "pages"
+    values:
+      description: "Sample AI Architecture, work 01 — a design study in five figures. The ask: verify the required identity claims in every region, keep raw PII and source documents out of checkpoints, and stay neutral about vendors and models."
+      image:
+        path: "/boundary-atlas/og/boundary-atlas.png"
+        width: 2400
+        height: 1260
+  - scope:
+      path: "boundary-atlas/00-boundary-map.en.md"
+      type: "pages"
+    values:
+      description: "Figure 0 of 5 — Draw the borders before the arrows: jurisdictional and trust boundaries, and the kinds of thing allowed to cross them."
+      image:
+        path: "/boundary-atlas/og/00-boundary-map.png"
+        width: 2400
+        height: 1260
+  - scope:
+      path: "boundary-atlas/01-border-ledger.en.md"
+      type: "pages"
+    values:
+      description: "Figure 1 of 5 — The border ledger: data classes against borders, with a verdict in every cell and no blank ones."
+      image:
+        path: "/boundary-atlas/og/01-border-ledger.png"
+        width: 2400
+        height: 1260
+  - scope:
+      path: "boundary-atlas/02-ceremony.en.md"
+      type: "pages"
+    values:
+      description: "Figure 2 of 5 — The ceremony, and the second missing arrow: minimal disclosure step by step, and why the verifier never calls the issuer back."
+      image:
+        path: "/boundary-atlas/og/02-ceremony.png"
+        width: 2400
+        height: 1260
+  - scope:
+      path: "boundary-atlas/03-deployment.en.md"
+      type: "pages"
+    values:
+      description: "Figure 3 of 5 — The standard cell, and where products are allowed to live: deployment, ownership, and the adapter layer."
+      image:
+        path: "/boundary-atlas/og/03-deployment.png"
+        width: 2400
+        height: 1260
+  - scope:
+      path: "boundary-atlas/04-partition-drill.en.md"
+      type: "pages"
+    values:
+      description: "Figure 4 of 5 — The drill, and the contract this series kept deferring: what the design does when the link is down, and what every attempt records."
+      image:
+        path: "/boundary-atlas/og/04-partition-drill.png"
+        width: 2400
+        height: 1260
