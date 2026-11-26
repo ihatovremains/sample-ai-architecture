@@ -1,0 +1,42 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>The Boundary Atlas · What can cross this checkpoint?</title>
+{% seo title=false %}<style>
+:root{color-scheme:light;font:100%/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#142433;background:#f8fafb}
+*{box-sizing:border-box}body{margin:0}main,.mast{width:min(1160px,calc(100% - 64px));margin:auto}
+.mast{display:flex;align-items:center;justify-content:space-between;min-height:72px;border-bottom:1px solid #d6dee1;font-weight:650;gap:10px}.mast small{font-size:14px;font-weight:450;color:#52636c}
+.hero{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:clamp(24px,4.5vw,76px);align-items:center;padding-block:clamp(28px,4vw,64px) 32px}
+.eyebrow{font-size:14px;font-weight:650;color:var(--color);margin:0 0 14px}h1{font-size:clamp(39px,4.8vw,70px);max-width:13ch;line-height:1.02;letter-spacing:-.055em;font-weight:630;margin:0;text-wrap:balance}
+.lead{font-size:clamp(16px,1.5vw,21px);line-height:1.5;color:#425362;margin:23px 0 0;max-width:39ch}
+figure{margin:0;min-width:0}.panel{position:relative;border-radius:16px;overflow:hidden;background:var(--dark);color:#fff;isolation:isolate;box-shadow:0 14px 36px -24px #19374e80}
+.art{aspect-ratio:1600/840;position:relative;overflow:hidden}.art img{width:100%;height:100%;display:block;object-fit:cover}.signal{position:absolute;width:clamp(7px,.82vw,12px);aspect-ratio:1;background:white;border-radius:50%;box-shadow:0 0 8px 3px #fff9;opacity:0;transform:translate(-50%,-50%);pointer-events:none}.strip{padding:14px 18px 17px;box-shadow:inset 0 1px 0 #ffffff35}
+.strip p{margin:0 0 10px;font-size:clamp(14px,1.15vw,18px);color:#fff}.steps{display:grid;grid-template-columns:repeat(3,1fr)}.step{padding:0 10px 0 13px;border-left:1px solid #ffffff52;min-width:0}.step:first-child{border:0;padding-left:0}.step:last-child{padding-right:0}.step span,.step b,.step small{display:block}.step small{margin-top:4px;font-size:clamp(12px,1.1vw,16px);line-height:1.1}.step span{color:#ecf5f6;font-size:clamp(13px,1.1vw,18px);line-height:1.25;margin-bottom:4px}.step b{font-size:clamp(17px,1.8vw,27px);line-height:1.15;letter-spacing:-.035em}
+.playbar{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 2px 0;color:#465b66;font-size:13px}.playbar button{font:inherit;color:var(--dark);background:var(--tint);border:0;border-radius:20px;min-height:36px;padding:4px 16px;cursor:pointer}.playbar button[hidden]{display:none}a:focus-visible,button:focus-visible{outline:3px solid #1c74af;outline-offset:3px}
+nav{display:flex;flex-wrap:wrap;column-gap:26px;row-gap:0;border-top:1px solid #d5dfe1;border-bottom:1px solid #d5dfe1;padding:10px 0}
+nav a{color:var(--color);font-size:16px;font-weight:620;text-decoration-thickness:1px;text-underline-offset:4px;padding-block:6px;display:inline-flex;align-items:center;min-height:42px}
+.detail{max-width:75ch;padding:24px 0 35px}.detail h2{font-size:clamp(22px,2.6vw,32px);margin:0 0 10px;letter-spacing:-.04em;line-height:1.13}.detail p{margin:0;color:#425362;font-size:17px}.sr{position:absolute;clip-path:inset(50%);width:1px;height:1px;overflow:hidden}
+@media(max-width:720px){main,.mast{width:calc(100% - 32px)}.mast{min-height:48px;font-size:14px}.mast small{font-size:12px}.hero{grid-template-columns:1fr;gap:17px;padding:23px 0 14px}.eyebrow{margin:0 0 7px;font-size:13px}h1{font-size:clamp(33px,8.6vw,48px);max-width:17ch}.lead{margin:10px 0 0;font-size:16px;max-width:48ch}.panel{border-radius:12px}.strip{padding:11px 12px 14px}.strip p{font-size:14px;margin-bottom:8px}.step{padding-left:8px;padding-right:4px}.step b{font-size:clamp(16px,4.6vw,23px)}.playbar button{min-height:40px}nav{column-gap:16px;padding:4px 0}nav a{font-size:14px}.detail{padding:20px 0}.detail p{font-size:16px}}
+.series-details{max-width:75ch;padding-bottom:3rem}.series-details a{color:var(--color)}.series-details li{margin:.5rem 0}
+</style></head><body style="--color:#156943;--dark:#124934;--tint:#e5f3e9"><header class="mast" id="the-boundary-atlas"><span>The Boundary Atlas</span><small>Takaaki Suzuki</small></header><main><section class="hero"><div><p class="eyebrow">Fictional identity design study</p><h1>What can cross this checkpoint?</h1><p class="lead">If each checkpoint keeps a copy of the same ID, every stop adds another sensitive record to protect. The holder keeps the identity document and presents an issuer-signed yes-or-no claim in a per-use credential.</p></div><figure aria-label="The original identity document stays with the holder. A per-use credential carrying an issuer-signed yes-or-no claim crosses the local presentation boundary. The checkpoint receives the claim."><div class="panel" data-start="44.8" data-end="60"><div class="art" aria-hidden="true"><img src="atlas.webp" alt=""><i class="signal" style="top:54%"></i></div><div class="strip"><p>One design path</p><div class="steps"><div class="step"><span>Holder keeps</span><b>Original ID</b></div><div class="step"><span>Crosses</span><b>Signed claim</b></div><div class="step"><span>Verifier sees</span><b>Yes or no</b></div></div></div></div><figcaption class="playbar"><span>Design study</span><button type="button" hidden>Pause</button></figcaption></figure></section><nav id="start-here" aria-label="Explore the project"><a target="_blank" rel="noopener" href="https://ihatovremains.github.io/sample-ai-architecture/boundary-atlas/00-boundary-map.en">Boundary map · Fig. 0</a><a target="_blank" rel="noopener" href="https://ihatovremains.github.io/sample-ai-architecture/boundary-atlas/01-border-ledger.en">Border ledger · Fig. 1</a><a target="_blank" rel="noopener" href="https://ihatovremains.github.io/sample-ai-architecture/boundary-atlas/04-partition-drill.en">Partition drill · Fig. 4</a></nav><section class="detail"><h2>Where is that boundary specified?</h2><p>The map names what may cross. The border ledger sets the conditions on each crossing. The partition drill follows a separate question: what happens when a region loses its connection?</p></section><section class="series-details" aria-label="The complete design study">{{ content }}</section></main><script>
+const panel=document.querySelector('.panel');
+const button=document.querySelector('button');
+const steps=[...panel.querySelectorAll('.step')];
+const signal=panel.querySelector('.signal');
+const motion=matchMedia('(prefers-reduced-motion: reduce)');
+const start=Number(panel.dataset.start), end=Number(panel.dataset.end);
+const duration=4950, cues=[250,1750,3250];
+let frame, elapsed=0, origin=0, state='ready', visible=false;
+function clamp(x){return Math.max(0,Math.min(1,x))}
+function draw(t){
+  steps.forEach((el,i)=>{const p=clamp((t-cues[i])/500);el.style.opacity=String(.46+.54*p);el.style.transform='translateY('+((1-p)*4)+'px)'});
+  const p=clamp((t-950)/2100);signal.style.left=(start+(end-start)*p)+'%';signal.style.opacity=String(Math.sin(Math.PI*p));
+}
+function label(){button.hidden=motion.matches;button.textContent=state==='done'?'Replay':state==='paused'?'Resume':'Pause'}
+function tick(now){elapsed=Math.min(duration,now-origin);draw(elapsed);if(elapsed>=duration){state='done';label();return}frame=requestAnimationFrame(tick)}
+function play(){cancelAnimationFrame(frame);origin=performance.now()-elapsed;state='playing';label();frame=requestAnimationFrame(tick)}
+function stop(next){cancelAnimationFrame(frame);if(state==='playing')elapsed=Math.min(duration,performance.now()-origin);state=next;draw(elapsed);label()}
+function update(){if(motion.matches){cancelAnimationFrame(frame);elapsed=duration;state='done';draw(elapsed);label();return}
+  if(visible&&!document.hidden&&(state==='ready'||state==='parked'))play();
+  if((!visible||document.hidden)&&state==='playing')stop('parked');label()}
+button.onclick=()=>{if(state==='playing'){stop('paused');return}if(state==='done')elapsed=0;play()};
+motion.addEventListener('change',update);document.addEventListener('visibilitychange',update);
+new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;update()}).observe(panel);draw(elapsed);update();
+</script></body></html>

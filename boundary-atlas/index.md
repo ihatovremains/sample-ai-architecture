@@ -1,4 +1,7 @@
-# The Boundary Atlas
+---
+layout: atlas-index
+title: The Boundary Atlas
+---
 
 *Sample AI Architecture, work 01 — a design study in five figures.*
 
@@ -12,12 +15,6 @@ regulatory walls. Inside it, people and businesses have to prove who they are,
 constantly. The ask: verify the required identity claims in every region, keep raw
 PII and source documents out of checkpoints, and stay neutral about vendors and
 models.
-
-## Start here
-
-- Start with [Figure 0](00-boundary-map.en): see who holds the original identity documents and what checkpoints may receive.
-- For the rules on what may cross each boundary, read [Figure 1](01-border-ledger.en).
-- For how the design handles a lost connection between regions, read [Figure 4](04-partition-drill.en).
 
 ## The five figures
 
